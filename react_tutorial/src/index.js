@@ -11,7 +11,7 @@ import Xpage from "./pages/Xpage"
 
 ReactDOM.render(
   <React.StrictMode>
-    <HomePage />
+    <Xpage />
   </React.StrictMode>,
   document.getElementById('root')
 );

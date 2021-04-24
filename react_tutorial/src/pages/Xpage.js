@@ -1,20 +1,19 @@
-import Core from "../components/Core";
+import ProductList from "../components/ProductList";
+import Searchbar from "../components/Searchbar";
 
-
-const data = [
-    {name:"kazım",department:"Developer",salary:"4000"},
-    {name:"kazım",department:"Developer",salary:"4000"},
-    {name:"kazım",department:"Developer",salary:"4000"},
-    {name:"kazım",department:"Developer",salary:"4000"},
-    {name:"kazım",department:"Developer",salary:"4000"},
-    {name:"kazım",department:"Developer",salary:"4000"}
-]
 const Xpage =()=>{
+
+    const search =(val)=>{
+        const searchedval = val
+        console.log(searchedval)
+        searchedval.preventDefault();
+    }
+
+
     return(
         <div>
-            {data.map((p,i)=>{
-                return(<Core per={p} key={i}/>)
-            })}
+            <Searchbar handleSearch ={search}/>
+            <ProductList/>
         </div>
     )
 }
