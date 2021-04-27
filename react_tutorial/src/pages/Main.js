@@ -2,13 +2,25 @@
 import User from "./User"
 import About from "./About"
 import Home from "./Home"
+import axios from "axios"
+import {useState,useEffect} from "react"
 
 // import {Container,Row,Col} from "reactstrap"
 import './Mainpage.css'
 import {BrowserRouter as Router, Route, Switch, Link} from "react-router-dom"
 
 
+
 function Main() {
+    const [postList,setPostList]=useState([])
+
+    const fetchData=()=>{
+        axios.get("https://jsonplaceholder.typicode.com/posts").then(res=>setPostList(res.data))
+    }
+
+    useEffect(()=>{
+        fetchData()
+    },[])
     return(
     <Router>
         <div className="Mainpage">
@@ -39,6 +51,11 @@ function Main() {
                     <Route exact path="/user/:firstname/:lastname" component={User}/>
                 </Switch>
             </div>
+            <div>{console.log("datalist:" , postList)}</div>
+            <div>{postList[0]?.body}</div>
+            {
+                postList.map(post=><p>{post.id}</p>)
+            }
             </header>       
         </div>
     </Router>
