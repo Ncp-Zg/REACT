@@ -1,0 +1,26 @@
+.Mainpage{
+    background-color: darkgreen;
+    font-size: calc(10px + 2vmin);
+}
+
+.Mainpage-link{
+    color: #09d3ac;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+}
+li{
+    width: 200px;
+    list-style-type: none ;
+    border:1px solid gray;
+    padding: 5px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:visited{
+    color: white;
+}

@@ -3,15 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './pages/App';
 import reportWebVitals from './reportWebVitals';
-import './global.css'
-import './main.css'
-import './mobile.css'
 import HomePage from "./pages/HomePage"
 import Xpage from "./pages/Xpage"
+import Main from "./pages/Main"
 
 ReactDOM.render(
   <React.StrictMode>
-    <Xpage />
+    <Main />
   </React.StrictMode>,
   document.getElementById('root')
 );
